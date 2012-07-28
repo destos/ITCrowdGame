@@ -1,0 +1,25 @@
+{
+  "name": "ITCrowdGame",
+  "version": "0.0.0",
+  "description": "A game based on the TV show IT Crowd",
+  "main": "server/server.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "canvas",
+    "impactjs"
+  ],
+  "scripts": {
+    "start": "coffee -w server/server.coffee",
+    "grunt": "grunt --config ./grunt.coffee"
+  },
+  "dependencies": {
+    "express": "2.5.11",
+    "node-impact": "https://github.com/destos/node-impact/tarball/master",
+    "grunt-contrib": "0.1.3"
+  },
+  "author": "Patrick Forringer",
+  "license": "BSD"
+}

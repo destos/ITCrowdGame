@@ -1,0 +1,5 @@
+#ignore compiled client files
+client
+node_modules
+ImpactJS
+npm-debug.log

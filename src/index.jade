@@ -1,0 +1,27 @@
+!!!
+html
+  head
+    title IT Crowd
+    style
+      html,body {
+        background-color: #000;
+        color: #fff;
+        font-family: helvetica, arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 12pt;
+      }
+      #canvas {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border: 1px solid #555;
+      }
+    script(src="lib/impact/impact.js")
+    script(src="lib/game.js")
+    
+  body
+    canvas#canvas
