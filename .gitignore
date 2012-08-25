@@ -1,5 +1,9 @@
 #ignore compiled client files
-client
+client/lib/game
+client/lib/impact
+client/lib/weltmeister
+client/index.html
+client/weltmeister.html
 node_modules
 ImpactJS
 npm-debug.log

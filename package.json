@@ -12,7 +12,7 @@
     "impactjs"
   ],
   "scripts": {
-    "start": "coffee -w server/server.coffee",
+    "start": "coffee server/server.coffee",
     "grunt": "grunt --config ./grunt.coffee"
   },
   "dependencies": {
