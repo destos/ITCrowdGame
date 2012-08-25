@@ -24,7 +24,7 @@ ig.module("game.entities.roy")
     collides: ig.Entity.COLLIDES.PASSIVE
     
     # Main sprite
-    animSheet: new ig.AnimationSheet("media/roy.png", 24, 42)
+    animSheet: new ig.AnimationSheet("media/entities/char/roy.png", 24, 42)
     
     health: 10
     

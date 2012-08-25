@@ -24,7 +24,7 @@ ig.module("game.entities.jen")
     collides: ig.Entity.COLLIDES.PASSIVE
     
     # Main sprite
-    animSheet: new ig.AnimationSheet("media/jen.png", 24, 42)
+    animSheet: new ig.AnimationSheet("media/entities/char/jen.png", 24, 42)
     
     health: 10
     

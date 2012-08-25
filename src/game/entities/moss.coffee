@@ -29,7 +29,7 @@ ig.module("game.entities.moss")
     collides: ig.Entity.COLLIDES.PASSIVE
     
     # Main sprite
-    animSheet: new ig.AnimationSheet("media/moss.png", 24, 42)
+    animSheet: new ig.AnimationSheet("media/entities/char/moss.png", 24, 42)
     
     # health: 10
     
@@ -80,10 +80,10 @@ ig.module("game.entities.moss")
       @currentAnim.flip.x = @flip
       
       # shoot dat gun
-      # if ig.input.pressed("shoot")
-      #   # debugger
-      #   @receiveDamage(2,@)
-      #   return
+      if ig.input.pressed("shoot")
+        # debugger
+        @receiveDamage(2,@)
+        return
       #   x = @pos.x + (if @flip then -6 else 6)
       #   y = @pos.y + 6
       #   ig.game.spawnEntity EntityProjectile, x, y,
