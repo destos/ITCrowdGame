@@ -55,16 +55,16 @@ ig.module("game.entities.abstract.actor")
 
       while i < len
         emitter = @emitters[i]
-        emitter.emit()  if emitter?
+        emitter.emit() if emitter?
         ++i
 
     draw: ->
-      px = @pos.x - @offset.x - ig.game.screen.x
-      py = @pos.y - @offset.y - ig.game.screen.y
+      # px = @pos.x - @offset.x - ig.game.screen.x
+      # py = @pos.y - @offset.y - ig.game.screen.y
       
-      if @_shadow?
-        shadowY = 68 - ig.game.screen.y
-        @_shadow.draw px + 4, shadowY
+      # if @_shadow?
+      #   shadowY = 68 - ig.game.screen.y
+      #   @_shadow.draw px + 4, shadowY
         
       @parent()
       # for i of Apparel.TYPE
@@ -79,7 +79,7 @@ ig.module("game.entities.abstract.actor")
       @_damageGizmo.damage += amount
 
     addEffect: (effect, applyEvenIfHasEffect) ->
-      applyEvenIfHasEffect = false  if applyEvenIfHasEffect is `undefined`
+      applyEvenIfHasEffect = false if applyEvenIfHasEffect is `undefined`
       return  if @hasEffectOfType(effect.type)  unless applyEvenIfHasEffect
       @_effects.push effect
 
@@ -110,7 +110,7 @@ ig.module("game.entities.abstract.actor")
       len = @emitters.length
 
       while i < len
-        return true  if @emitters[i] instanceof emitterClass
+        return true if @emitters[i] instanceof emitterClass
         i++
       false
 

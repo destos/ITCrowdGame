@@ -11,14 +11,15 @@ ig.module("game.entities.particles.emitter")
     emitStrengthMin: 100
     emitStrengthMax: 100
     emitterLife: 0
-    lifeMin: 2
-    lifeMax: 2
+    lifeMin: 4
+    lifeMax: 4
+    
     velMin:
       x: 0
       y: 0
 
     velMax:
-      x: 200
+      x: 0
       y: 0
 
     accelMin:
@@ -77,9 +78,9 @@ ig.module("game.entities.particles.emitter")
       @_dead = true
 
     _spawn: ->
-      return  unless @particleClass?
+      return unless @particleClass?
       angleRad = Number(@emitAngleMin + (@emitAngleMax - @emitAngleMin) * Math.random()).toRad()
-      angleRad -= 3.14159265  if @invertDir
+      angleRad -= 3.14159265 if @invertDir
       dir = (if @invertDir then -1 else 1)
       cos = Math.cos(angleRad)
       sin = Math.sin(angleRad)
@@ -98,6 +99,6 @@ ig.module("game.entities.particles.emitter")
         accel:
           x: @accelMin.x + (@accelMax.x - @accelMin.x) * Math.random()
           y: @accelMin.y + (@accelMax.y - @accelMin.y) * Math.random()
-
+      
       ig.game.spawnEntity @particleClass, settings.pos.x, settings.pos.y, settings
   )

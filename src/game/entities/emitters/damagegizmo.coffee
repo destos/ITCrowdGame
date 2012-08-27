@@ -16,6 +16,7 @@ ig.module("game.entities.emitters.damagegizmo")
         emitAngleMax: -70
         emitStrengthMin: 50
         emitStrengthMax: 50
+        invertDir: true
         posOffsetMin:
           x: 0
           y: -4
@@ -33,7 +34,7 @@ ig.module("game.entities.emitters.damagegizmo")
           y: 0
 
     emit: ->
-      return  if @damage <= 0
+      return if @damage <= 0
       @pos.x = @owner.pos.x
       @pos.y = @owner.pos.y
       @customData = @damage.floor()

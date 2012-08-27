@@ -44,9 +44,9 @@ ig.module("game.entities.moss")
       @addAnim 'walk', 0.1, [1...9]
       @addAnim 'duck', 0.1, [0]
       # @addAnim( "jet", 0.10, [ 10, 11 ] )
-      @addAnim 'jump', 0.4, [8,9]
-      @addAnim 'fall', 0.4, [6,7]
-      @addAnim 'push', 0.3, [12...17]
+      # @addAnim 'jump', 0.4, [8,9]
+      # @addAnim 'fall', 0.4, [6,7]
+      # @addAnim 'push', 0.3, [12...17]
       # @addShadow()
     update: ->
       
@@ -68,10 +68,10 @@ ig.module("game.entities.moss")
         @vel.y = -@jump
       
       # set the current animation, based on the player's speed
-      if @vel.y < 0
-        @currentAnim = @anims.jump
-      else if  @vel.y > 0
-        @currentAnim = @anims.fall
+      # if @vel.y < 0
+      #   @currentAnim = @anims.jump
+      # else if  @vel.y > 0
+      #   @currentAnim = @anims.fall
       else if( @vel.x != 0 )
         @currentAnim = @anims.walk
       else
