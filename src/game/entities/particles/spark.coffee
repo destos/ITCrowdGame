@@ -37,7 +37,6 @@ ig.module("game.entities.particles.spark")
       @parent x, y, settings
       @addAnim "arc", 0.1, [0...6]
       @currentAnim = @anims.arc
-      console.log settings
       @currentAnim.flip.x = settings.accel.x > 0
       if @currentAnim.flip.x
         @pos.x = @pos.x - 26

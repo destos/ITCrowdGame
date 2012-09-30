@@ -1,9 +1,17 @@
 ig.module("game.entities.parts.ram")
 .requires(
-  "game.entities.parts.genericpart"
+  "game.entities.abstract.part"
 ).defines =>
 
-  @EntityRam = @EntityGenericpart.extend
+  @EntityRam = @EntityAbstractpart.extend
+    size:
+      x: 7
+      y: 5
+      
+    offset:
+      x: 3
+      y: 5
+      
     # Main sprite
     animSheet: new ig.AnimationSheet("media/entities/parts/ram.png", 12, 12)
     partType: 'ram'

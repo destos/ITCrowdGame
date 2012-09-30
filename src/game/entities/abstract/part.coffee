@@ -1,10 +1,10 @@
-ig.module("game.entities.parts.genericpart")
+ig.module("game.entities.abstract.part")
 .requires(
   "impact.entity"
   "game.entities.emitters.electrifiedgizmo"
 ).defines =>
 
-  @EntityGenericpart = ig.Entity.extend
+  @EntityAbstractpart = ig.Entity.extend
     size:
       x: 12
       y: 12
