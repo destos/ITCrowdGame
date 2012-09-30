@@ -47,7 +47,7 @@ ig.module("game.entities.parts.genericpart")
     
     sparkReset: ->
       @_sparkTimer.reset()
-      @_sparkOffset = (Math.random() * 4).floor()
+      @_sparkOffset = (Math.random() * 15).floor()
         
     update: ->
       @parent()
